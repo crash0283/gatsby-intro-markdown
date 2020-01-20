@@ -1,14 +1,12 @@
 import React from "react"
-//Adding the "Link" component from the "gatsby" library will allow you to link internal pages
-//uses react-router underneath
 import { Link } from "gatsby"
-//Adding the "Layout" component will allow you to keep consistent layouts throughout your app
-//To make adjustments to the "Layout" component, go to the layout.js file
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import People from "../components/people"
 
-//Adding a component inside the 'pages' directory will automatically create that page for you with the path "/bio"
+
+//Replacing the previous content wiht our "People" component, I can now reuse the component with my custom styles only
+//applied to that component
 
 const Bio = () => {
   return (
