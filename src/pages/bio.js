@@ -6,6 +6,7 @@ import { Link } from "gatsby"
 //To make adjustments to the "Layout" component, go to the layout.js file
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import People from "../components/people"
 
 //Adding a component inside the 'pages' directory will automatically create that page for you with the path "/bio"
 
@@ -13,21 +14,26 @@ const Bio = () => {
   return (
     <Layout>
       <SEO title="Bio" />
-      <img src="https://source.unsplash.com/random/400x200" alt="" />
-      <h1>Hi, My name is Chris.</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur
-        provident eos saepe assumenda qui labore? Ipsa ullam accusantium illo et
-        incidunt aut nisi, facere quasi deleniti ex fugit, ipsum dolor saepe!
-        Voluptate nulla quidem incidunt voluptatem delectus omnis consectetur,
-        perspiciatis nihil molestiae suscipit, nobis fugiat cum fuga et dolorum
-        saepe quasi aliquid? Reiciendis ut quia impedit tempora consequuntur
-        minus rerum unde mollitia nisi nemo quae pariatur debitis aliquid id,
-        vitae error voluptatibus eveniet in dolorum quo provident!
-        Necessitatibus enim neque, blanditiis eligendi ullam, modi hic quo
-        repellat officiis qui voluptates. Cum quibusdam tenetur aut dolorem sunt
-        asperiores delectus incidunt quaerat!
-      </p>
+      <People
+        avatar="https://source.unsplash.com/random/"
+        title="Chris"
+        excerpt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, iure? Molestiae, architecto tempora placeat eligendi iusto sit repellendus facilis culpa reprehenderit fuga maxime in ad quis optio quas voluptatibus quibusdam!"
+      />
+      <People
+        avatar="https://source.unsplash.com/random/"
+        title="Sue"
+        excerpt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, iure? Molestiae, architecto tempora placeat eligendi iusto sit repellendus facilis culpa reprehenderit fuga maxime in ad quis optio quas voluptatibus quibusdam!"
+      />
+      <People
+        avatar="https://source.unsplash.com/random/"
+        title="Matt"
+        excerpt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, iure? Molestiae, architecto tempora placeat eligendi iusto sit repellendus facilis culpa reprehenderit fuga maxime in ad quis optio quas voluptatibus quibusdam!"
+      />
+      <People
+        avatar="https://source.unsplash.com/random/"
+        title="Kelly"
+        excerpt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, iure? Molestiae, architecto tempora placeat eligendi iusto sit repellendus facilis culpa reprehenderit fuga maxime in ad quis optio quas voluptatibus quibusdam!"
+      />
       <Link to="/">&larr; Back to Home</Link>
     </Layout>
   )
