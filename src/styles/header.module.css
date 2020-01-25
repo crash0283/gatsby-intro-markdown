@@ -5,10 +5,26 @@
 .link {
     color: white;
     text-decoration: none;
-    margin-right: 1rem;
+    text-align: center;
 }
 
 .link:hover {
     text-decoration: none;
     color: rgb(199, 224, 196)
+}
+
+.row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        justify-content: center;
+        align-items: center;
+    }
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
 }

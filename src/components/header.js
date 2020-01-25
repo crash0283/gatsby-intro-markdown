@@ -10,8 +10,8 @@ const Header = ({ siteTitle }) => {
     {
       file(relativePath: { eq: "images/gatsby-astronaut.png" }) {
         childImageSharp {
-          fixed(width: 80, height: 80) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -26,12 +26,16 @@ const Header = ({ siteTitle }) => {
       }}
     >
       <Container fluid={true}>
-        <Row>
+        <Row className={headerStyles.header}>
           <Col sm={1}>
-            <Img fixed={data.file.childImageSharp.fixed} alt="logo" className="mt-1" />
+            <Img
+              fluid={data.file.childImageSharp.fluid}
+              alt="logo"
+              className="mt-1 d-none d-md-block"
+            />
           </Col>
           <Col sm="auto">
-            <h1 style={{ margin: 0 }}>
+            <h1 style={{ margin: 0, textAlign: `center` }}>
               <Link
                 to="/"
                 style={{
@@ -47,29 +51,35 @@ const Header = ({ siteTitle }) => {
         {
           //Create a quick navbar
         }
-        <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          <Link
-            to="/"
-            className={headerStyles.link}
-            activeStyle={{ color: `rgb(199, 224, 196)` }}
-          >
-            Home
-          </Link>
-          <Link
-            to="/bio"
-            className={headerStyles.link}
-            activeStyle={{ color: `rgb(199, 224, 196)` }}
-          >
-            Bio
-          </Link>
-          <Link
-            to="/about"
-            className={headerStyles.link}
-            activeStyle={{ color: `rgb(199, 224, 196)` }}
-          >
-            About Files
-          </Link>
-        </div>
+        <Row className="justify-content-end">
+          <Col sm={1} style={{textAlign: "center"}}>
+            <Link
+              to="/"
+              className={headerStyles.link}
+              activeStyle={{ color: `rgb(199, 224, 196)` }}
+            >
+              Home
+            </Link>
+          </Col>
+          <Col sm={1} style={{textAlign: "center"}}>
+            <Link
+              to="/bio"
+              className={headerStyles.link}
+              activeStyle={{ color: `rgb(199, 224, 196)` }}
+            >
+              Bio
+            </Link>
+          </Col>
+          <Col sm={1} style={{textAlign: "center"}}>
+            <Link
+              to="/about"
+              className={headerStyles.link}
+              activeStyle={{ color: `rgb(199, 224, 196)` }}
+            >
+              About Files
+            </Link>
+          </Col>
+        </Row>
       </Container>
     </header>
   )
