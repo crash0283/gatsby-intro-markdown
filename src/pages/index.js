@@ -1,7 +1,6 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 //Add Link to link to programatically created pages
 import { graphql, Link } from "gatsby"
@@ -34,15 +33,15 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <div>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <>
-            <Link to={node.fields.slug}>
+        {data.allMarkdownRemark.edges.map(({ node },i) => (
+          <div key={i}>
+            <Link to={node.fields.slug} style={{textDecoration: "none", color: `rgb(147, 214, 147)`}}>
               <h1>{node.frontmatter.title}</h1>
             </Link>
             <h4>{node.frontmatter.data}</h4>
             <p>{node.excerpt}</p>
             <hr style={{ height: "3px" }} />
-          </>
+          </div>
         ))}
       </div>
       <Link to="/page-2/">Go to page 2</Link>

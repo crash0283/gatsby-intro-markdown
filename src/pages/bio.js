@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import People from "../components/people"
@@ -32,7 +31,6 @@ const Bio = () => {
         title="Kelly"
         excerpt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, iure? Molestiae, architecto tempora placeat eligendi iusto sit repellendus facilis culpa reprehenderit fuga maxime in ad quis optio quas voluptatibus quibusdam!"
       />
-      <Link to="/">&larr; Back to Home</Link>
     </Layout>
   )
 }

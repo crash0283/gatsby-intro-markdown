@@ -1,0 +1,14 @@
+.activeLink {
+    color: rgb(199, 224, 196)
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: rgb(199, 224, 196)
+}
