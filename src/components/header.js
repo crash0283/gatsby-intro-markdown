@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => {
             <Img
               fluid={data.file.childImageSharp.fluid}
               alt="logo"
-              className="mt-1 d-none d-md-block"
+              className="mt-1 d-none d-md-block rounded"
             />
           </Col>
           <Col sm="auto">
